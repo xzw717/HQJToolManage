@@ -16,7 +16,7 @@
 		1F7ADBA824E3D048009079F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADBA724E3D048009079F2 /* main.m */; };
 		1F7ADBB224E3D049009079F2 /* HQJToolManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADBB124E3D049009079F2 /* HQJToolManagerTests.m */; };
 		1F7ADBBD24E3D049009079F2 /* HQJToolManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADBBC24E3D049009079F2 /* HQJToolManagerUITests.m */; };
-		1F7ADBCD24E3D082009079F2 /* ToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADBCB24E3D082009079F2 /* ToolManager.m */; };
+		1F7ADBD224E3D5D1009079F2 /* ToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADBD124E3D5D1009079F2 /* ToolManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		1F7ADBB824E3D049009079F2 /* HQJToolManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HQJToolManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7ADBBC24E3D049009079F2 /* HQJToolManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQJToolManagerUITests.m; sourceTree = "<group>"; };
 		1F7ADBBE24E3D049009079F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F7ADBCB24E3D082009079F2 /* ToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolManager.m; sourceTree = "<group>"; };
-		1F7ADBCC24E3D082009079F2 /* ToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolManager.h; sourceTree = "<group>"; };
+		1F7ADBD024E3D5D1009079F2 /* ToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolManager.h; sourceTree = "<group>"; };
+		1F7ADBD124E3D5D1009079F2 /* ToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		1F7ADB9424E3D045009079F2 /* HQJToolManager */ = {
 			isa = PBXGroup;
 			children = (
-				1F7ADBCA24E3D065009079F2 /* Tool */,
+				1F7ADBCE24E3D5D1009079F2 /* Classes */,
 				1F7ADB9524E3D045009079F2 /* AppDelegate.h */,
 				1F7ADB9624E3D045009079F2 /* AppDelegate.m */,
 				1F7ADB9824E3D045009079F2 /* SceneDelegate.h */,
@@ -141,11 +141,19 @@
 			path = HQJToolManagerUITests;
 			sourceTree = "<group>";
 		};
-		1F7ADBCA24E3D065009079F2 /* Tool */ = {
+		1F7ADBCE24E3D5D1009079F2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1F7ADBCC24E3D082009079F2 /* ToolManager.h */,
-				1F7ADBCB24E3D082009079F2 /* ToolManager.m */,
+				1F7ADBCF24E3D5D1009079F2 /* Tool */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1F7ADBCF24E3D5D1009079F2 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				1F7ADBD024E3D5D1009079F2 /* ToolManager.h */,
+				1F7ADBD124E3D5D1009079F2 /* ToolManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -281,7 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7ADB9D24E3D045009079F2 /* ViewController.m in Sources */,
-				1F7ADBCD24E3D082009079F2 /* ToolManager.m in Sources */,
+				1F7ADBD224E3D5D1009079F2 /* ToolManager.m in Sources */,
 				1F7ADB9724E3D045009079F2 /* AppDelegate.m in Sources */,
 				1F7ADBA824E3D048009079F2 /* main.m in Sources */,
 				1F7ADB9A24E3D045009079F2 /* SceneDelegate.m in Sources */,
