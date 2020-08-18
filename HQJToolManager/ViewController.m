@@ -25,9 +25,9 @@
 
 }
 - (void)click {
-    [HintView enrichSubviews:@"测试弹窗" andSureTitle:@"确定" cancelTitle:@"取消" sureAction:^{
+//    [HintView enrichSubviews:@"测试弹窗" andSureTitle:@"确定" cancelTitle:@"取消" sureAction:^{
         
-    }];
+//    }];
 }
 
 @end
