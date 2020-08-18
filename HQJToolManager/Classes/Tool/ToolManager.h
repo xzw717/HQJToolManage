@@ -122,7 +122,7 @@ typedef NS_ENUM(NSInteger,PriceType) {
 /**
  删除相应键的值
 
- @param key 键
+ @param key 键recommendedQualification
  */
 + (void)removeDataKey:(NSString *)key;
 
@@ -136,24 +136,24 @@ typedef NS_ENUM(NSInteger,PriceType) {
 /**
  登陆
  */
-+ (void)login;
+//+ (void)login;
 
-+ (void)loginBlock:(void(^)(void))sender ;
+//+ (void)loginBlock:(void(^)(void))sender ;
 
 /**
  打开相机
  */
-+ (void)openCamera;
+//+ (void)openCamera;
 
 + (void)alertTitle:(NSString  *)title content:(NSString *)content theFirstButtonTitle:(NSString * )buttonTitle  theFirstButton:(void(^)(void))confirm  theSecondButtonTitle:(NSString *)buttonTitles theSecondButton:(void(^)(void))cancel;
 
 
 
 
-+ (NSString*)encodeBase64String:(NSString * )input;
-+ (NSString*)decodeBase64String:(NSString * )input;
-+ (NSString*)encodeBase64Data:(NSData *)data;
-+ (NSString*)decodeBase64Data:(NSData *)data;
+//+ (NSString*)encodeBase64String:(NSString * )input;
+//+ (NSString*)decodeBase64String:(NSString * )input;
+//+ (NSString*)encodeBase64Data:(NSData *)data;
+//+ (NSString*)decodeBase64Data:(NSData *)data;
 
 
 /**
@@ -169,7 +169,7 @@ typedef NS_ENUM(NSInteger,PriceType) {
 
  @param time 时间
  */
-+ (void)getServerTimer:(void(^)(NSString *timer))time;
+//+ (void)getServerTimer:(void(^)(NSString *timer))time;
 
 
 
@@ -196,7 +196,7 @@ typedef NS_ENUM(NSInteger,PriceType) {
 
  @return 时间
  */
-+ (NSDate *)getInternetDate;
+//+ (NSDate *)getInternetDate;
 
 /**
  获取当前时间戳
@@ -247,7 +247,7 @@ typedef NS_ENUM(NSInteger,PriceType) {
  @param send 验证内容
  @param inputPassWord 是否选择了用输入
  */
-+ (void)verificationTouchID:(void(^)(BOOL isSuccess,NSError *error))send Input:(void(^)(BOOL isInputPassWord))inputPassWord ;
+//+ (void)verificationTouchID:(void(^)(BOOL isSuccess,NSError *error))send Input:(void(^)(BOOL isInputPassWord))inputPassWord ;
 
 
 /**
@@ -334,7 +334,7 @@ typedef NS_ENUM(NSInteger,PriceType) {
 
  @return hash
  */
-+ (NSString *)hashCode;
+//+ (NSString *)hashCode;
 
 /**
  截取指定小数点几位字符串
@@ -365,19 +365,14 @@ typedef NS_ENUM(NSInteger,PriceType) {
 + (NSString *)toHex:(long long int)tmpid;
 
 /**
- 推荐注册
- */
-+ (void)shareRegistered;
-
-/**
  微信推荐注册
  */
-+ (void)shareImage;
+//+ (void)shareImage;
 //获取最顶层的弹出视图,没有子节点则返回本身
 + (UIViewController *)topestPresentedViewControllerForVC:(UIViewController *)viewController;
 
 ///  是否可点击推荐奖励 
-+ (BOOL)recommendedQualification;
+//+ (BOOL)recommendedQualification;
 /// 字符串是否包含表情
 + (BOOL)stringContainsEmoji:(NSString *)string;
 /// 延时多少时间执行
@@ -407,11 +402,7 @@ typedef NS_ENUM(NSInteger,PriceType) {
 
 
 + (NSNumber *)reviseDouble:(double)number;
-/// 自动计算显示时长的toast
-+ (void)showToastWithTitle:(NSString *)title position:(id)position;
-+ (void)showTopToastWithTitle:(NSString *)title;
-+ (void)showCenterToastWithTitle:(NSString *)title;
-+ (void)showBottomToastWithTitle:(NSString *)title;
+
 
 @end
 NS_ASSUME_NONNULL_END

@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <LocalAuthentication/LocalAuthentication.h>
 #import "sys/utsname.h"
+//#import <NSurk>
 @implementation ToolManager
 + (CGFloat)setTextWidthStr:(NSString *)str andFont:(UIFont *)fonts {
     
@@ -99,8 +100,6 @@
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults removeObjectForKey:key];
     [userDefaults synchronize];
-    
-
 }
 
 
@@ -169,7 +168,7 @@
 + (NSString *)reverseSwitchTimer:(NSString *)str timeStyle:(TimeTransformationStlye)style {
     NSInteger timer =  [str integerValue];
     
-    if ([[NSString stringWithFormat:@"%ld",timer] length] == 13) {
+    if ([[NSString stringWithFormat:@"%ld",(long)timer] length] == 13) {
         timer/=1000;
     }
     NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:timer];
@@ -226,59 +225,62 @@
 
 
 #pragma mark ----时间戳
-+ (NSDate *)getInternetDate {
-    NSString *urlString = @"http://m.baidu.com/";
-    
-    urlString = [urlString stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
-    
-    // 实例化NSMutableURLRequest，并进行参数配置
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    
-    [request setURL:[NSURL URLWithString: urlString]];
-    
-    [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
-    
-    [request setTimeoutInterval: 5];
-    
-    [request setHTTPShouldHandleCookies:FALSE];
-    
-    [request setHTTPMethod:@"GET"];
-    
-    NSError *error = nil;
-    
-    NSHTTPURLResponse *response;
-    
-    [NSURLConnection sendSynchronousRequest:request
-     
-                          returningResponse:&response error:&error];
-    if (error) {
-        return [NSDate date];
-    }
-    
-    //    NSLog(@"response is %@",response);
-    
-    NSString *date = [[response allHeaderFields] objectForKey:@"Date"];
-    //    NSLog(@"date is \n%@",date);
-    
-    date = [date substringFromIndex:5];
-    
-    date = [date substringToIndex:[date length]-4];
-    
-    NSDateFormatter *dMatter = [[NSDateFormatter alloc] init];
-    
-    dMatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
-    
-    [dMatter setDateFormat:@"dd MMM yyyy HH:mm:ss"];
-    
-    [dMatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];//直接指定时区，这里是东8区
-    
-    
-    NSDate *netDate = [[dMatter dateFromString:date] dateByAddingTimeInterval:60*60*8];
-    
-    return netDate;
-    
-}
+//+ (NSDate *)getInternetDate {
+//    NSString *urlString = @"http://m.baidu.com/";
+//
+//    urlString = [urlString stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+//
+//    // 实例化NSMutableURLRequest，并进行参数配置
+//
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+//
+//    [request setURL:[NSURL URLWithString: urlString]];
+//
+//    [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+//
+//    [request setTimeoutInterval: 5];
+//
+//    [request setHTTPShouldHandleCookies:FALSE];
+//
+//    [request setHTTPMethod:@"GET"];
+//
+//    NSError *error = nil;
+//
+//    NSHTTPURLResponse *response;
+//    NSURLSession *req ;
+//    [req dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//
+//    }];
+////    [NSURLConnection sendSynchronousRequest:request
+////
+////                          returningResponse:&response error:&error];
+//    if (error) {
+//        return [NSDate date];
+//    }
+//
+//    //    NSLog(@"response is %@",response);
+//
+//    NSString *date = [[response allHeaderFields] objectForKey:@"Date"];
+//    //    NSLog(@"date is \n%@",date);
+//
+//    date = [date substringFromIndex:5];
+//
+//    date = [date substringToIndex:[date length]-4];
+//
+//    NSDateFormatter *dMatter = [[NSDateFormatter alloc] init];
+//
+//    dMatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+//
+//    [dMatter setDateFormat:@"dd MMM yyyy HH:mm:ss"];
+//
+//    [dMatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];//直接指定时区，这里是东8区
+//
+//
+//    NSDate *netDate = [[dMatter dateFromString:date] dateByAddingTimeInterval:60*60*8];
+//
+//    return netDate;
+//
+//}
 
 #pragma mark --- 获取当前时间戳
 + (NSString *)getCurrentTimeStamp {
@@ -629,30 +631,7 @@
 #pragma mark --- 时间转化（1970至今）
 // 时间戳为13位是精确到毫秒的，10位精确到秒
 +(NSString *)switchTimer:(NSInteger)timer {
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"yyyy-MM-d"];
-//    NSString *dateLoca = [NSString stringWithFormat:@"%ld",timer*24*60*60];
-//    NSTimeInterval time=[dateLoca doubleValue];
-//    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:time];
-//    NSString *timestr = [formatter stringFromDate:detaildate];
-//    
-//    NSTimeInterval time = timer + 28800;//因为时差问题要加8小时 == 28800 sec
-//    if ([[NSString stringWithFormat:@"%ld",timer] length] == 13) {
-//        timer/=1000;
-//    }
-//    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:timer];
-//
-//    //实例化一个NSDateFormatter对象
-//
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//
-//    //设定时间格式,这里可以设置成自己需要的格式
-//
-//    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-//
-//    NSString *currentDateStr = [dateFormatter stringFromDate: detaildate];
-//    return currentDateStr;
-    return  [ToolManager reverseSwitchTimer:[NSString stringWithFormat:@"%ld",timer] timeStyle:TimeTransformationStlyeDateMonthYearHourMinutesSeconds];
+    return  [ToolManager reverseSwitchTimer:[NSString stringWithFormat:@"%ld",(long)timer] timeStyle:TimeTransformationStlyeDateMonthYearHourMinutesSeconds];
 
 }
 
@@ -1099,8 +1078,8 @@
 
 + (void)callPhoneWithPhoneNumer:(NSString *)numer {
 
-    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",numer];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",numer];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 
 }
 
@@ -1118,10 +1097,8 @@
     } else {
         return @"";
     }
-    
 }
 + (NSString *)reviseString:(NSString *)string {
-    
     /* 直接传入精度丢失有问题的Double类型*/
     double conversionValue        = (double)[string floatValue];
     NSString *doubleString        = [NSString stringWithFormat:@"%lf", conversionValue];
@@ -1131,9 +1108,9 @@
 + (NSNumber *)reviseDouble:(double)number {
     NSString *string = [NSString stringWithFormat:@"%f",number];
               
-    double doubStr = [string doubleValue];
-               
-    float floatStr = [string floatValue];
+//    double doubStr = [string doubleValue];
+//
+//    float floatStr = [string floatValue];
          
     NSNumberFormatter *numberFor = [[NSNumberFormatter alloc] init];
     

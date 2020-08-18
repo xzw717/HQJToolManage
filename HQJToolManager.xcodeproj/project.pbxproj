@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F52A90824EB868400FF8110 /* HintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F52A90624EB868400FF8110 /* HintView.m */; };
+		1F52A90B24EB876400FF8110 /* UIColor+ColorConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F52A90924EB876400FF8110 /* UIColor+ColorConversion.m */; };
 		1F7ADB9724E3D045009079F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADB9624E3D045009079F2 /* AppDelegate.m */; };
 		1F7ADB9A24E3D045009079F2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADB9924E3D045009079F2 /* SceneDelegate.m */; };
 		1F7ADB9D24E3D045009079F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADB9C24E3D045009079F2 /* ViewController.m */; };
@@ -17,6 +19,7 @@
 		1F7ADBB224E3D049009079F2 /* HQJToolManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADBB124E3D049009079F2 /* HQJToolManagerTests.m */; };
 		1F7ADBBD24E3D049009079F2 /* HQJToolManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADBBC24E3D049009079F2 /* HQJToolManagerUITests.m */; };
 		1F7ADBD224E3D5D1009079F2 /* ToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ADBD124E3D5D1009079F2 /* ToolManager.m */; };
+		418DA6531AF68B80D803F30C /* libPods-HQJToolManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A36F9A33099BEEBFDEB5CD /* libPods-HQJToolManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F52A90624EB868400FF8110 /* HintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintView.m; sourceTree = "<group>"; };
+		1F52A90724EB868400FF8110 /* HintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintView.h; sourceTree = "<group>"; };
+		1F52A90924EB876400FF8110 /* UIColor+ColorConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorConversion.m"; sourceTree = "<group>"; };
+		1F52A90A24EB876400FF8110 /* UIColor+ColorConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorConversion.h"; sourceTree = "<group>"; };
 		1F7ADB9224E3D045009079F2 /* HQJToolManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HQJToolManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7ADB9524E3D045009079F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F7ADB9624E3D045009079F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,6 +64,9 @@
 		1F7ADBBE24E3D049009079F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F7ADBD024E3D5D1009079F2 /* ToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolManager.h; sourceTree = "<group>"; };
 		1F7ADBD124E3D5D1009079F2 /* ToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolManager.m; sourceTree = "<group>"; };
+		28A36F9A33099BEEBFDEB5CD /* libPods-HQJToolManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQJToolManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2636D63261BD1A470ED1B8C /* Pods-HQJToolManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQJToolManager.debug.xcconfig"; path = "Target Support Files/Pods-HQJToolManager/Pods-HQJToolManager.debug.xcconfig"; sourceTree = "<group>"; };
+		D4EAB297D07F058D69B832DF /* Pods-HQJToolManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQJToolManager.release.xcconfig"; path = "Target Support Files/Pods-HQJToolManager/Pods-HQJToolManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418DA6531AF68B80D803F30C /* libPods-HQJToolManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F52A90524EB868400FF8110 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F52A90A24EB876400FF8110 /* UIColor+ColorConversion.h */,
+				1F52A90924EB876400FF8110 /* UIColor+ColorConversion.m */,
+				1F52A90724EB868400FF8110 /* HintView.h */,
+				1F52A90624EB868400FF8110 /* HintView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1F7ADB8924E3D045009079F2 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +113,8 @@
 				1F7ADBB024E3D049009079F2 /* HQJToolManagerTests */,
 				1F7ADBBB24E3D049009079F2 /* HQJToolManagerUITests */,
 				1F7ADB9324E3D045009079F2 /* Products */,
+				38059D918F41F3AD580196E1 /* Pods */,
+				7FC6B3AB43B6D1F013393DFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +168,7 @@
 		1F7ADBCE24E3D5D1009079F2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1F52A90524EB868400FF8110 /* View */,
 				1F7ADBCF24E3D5D1009079F2 /* Tool */,
 			);
 			path = Classes;
@@ -158,6 +183,23 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		38059D918F41F3AD580196E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2636D63261BD1A470ED1B8C /* Pods-HQJToolManager.debug.xcconfig */,
+				D4EAB297D07F058D69B832DF /* Pods-HQJToolManager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7FC6B3AB43B6D1F013393DFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28A36F9A33099BEEBFDEB5CD /* libPods-HQJToolManager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F7ADBC124E3D049009079F2 /* Build configuration list for PBXNativeTarget "HQJToolManager" */;
 			buildPhases = (
+				5D894713BD39CE2422CDF072 /* [CP] Check Pods Manifest.lock */,
 				1F7ADB8E24E3D045009079F2 /* Sources */,
 				1F7ADB8F24E3D045009079F2 /* Frameworks */,
 				1F7ADB9024E3D045009079F2 /* Resources */,
@@ -283,6 +326,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D894713BD39CE2422CDF072 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HQJToolManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F7ADB8E24E3D045009079F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -292,7 +360,9 @@
 				1F7ADBD224E3D5D1009079F2 /* ToolManager.m in Sources */,
 				1F7ADB9724E3D045009079F2 /* AppDelegate.m in Sources */,
 				1F7ADBA824E3D048009079F2 /* main.m in Sources */,
+				1F52A90B24EB876400FF8110 /* UIColor+ColorConversion.m in Sources */,
 				1F7ADB9A24E3D045009079F2 /* SceneDelegate.m in Sources */,
+				1F52A90824EB868400FF8110 /* HintView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,35 +529,63 @@
 		};
 		1F7ADBC224E3D049009079F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2636D63261BD1A470ED1B8C /* Pods-HQJToolManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y28K2L3GRG;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = HQJToolManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.first.HQJToolManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1F7ADBC324E3D049009079F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4EAB297D07F058D69B832DF /* Pods-HQJToolManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y28K2L3GRG;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = HQJToolManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.first.HQJToolManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

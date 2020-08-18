@@ -2,7 +2,7 @@
 //  HintView.h
 //  HQJBusiness
 //
-//  Created by 姚 on 2019/6/25.
+//  Created by XXX on 2019/6/25.
 //  Copyright © 2019年 Fujian first time iot technology investment co., LTD. All rights reserved.
 //
 
