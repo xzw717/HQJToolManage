@@ -1,7 +1,7 @@
 //
 //  ToolManager.h
 //  WuWuMap
-//
+//   0.0.2------0.1
 //  Created by mymac on 2017/2/20.
 //  Copyright © 2017年 Fujian first time iot technology investment co., LTD. All rights reserved.
 //
